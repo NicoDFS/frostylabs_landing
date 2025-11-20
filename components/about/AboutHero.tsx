@@ -7,8 +7,13 @@ export function AboutHero() {
   const t = useTranslations("aboutPage.hero");
 
   return (
-    <section className="pt-32 pb-20 px-6">
-      <div className="container mx-auto max-w-6xl">
+    <section className="relative pt-32 pb-20 px-6 overflow-hidden">
+      {/* Ice crystal ambient effects */}
+      <div className="absolute inset-0 ice-crystal opacity-20"></div>
+      <div className="absolute top-20 right-20 w-96 h-96 bg-frost-blue/5 rounded-full blur-3xl float-animation"></div>
+      <div className="absolute bottom-20 left-20 w-80 h-80 bg-ice-blue/5 rounded-full blur-3xl float-animation" style={{ animationDelay: '-3s' }}></div>
+
+      <div className="container mx-auto max-w-6xl relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -21,7 +26,7 @@ export function AboutHero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="inline-block mb-6"
           >
-            <span className="px-6 py-2 bg-gradient-to-r from-electric-cyan/20 to-neon-purple/20 border border-electric-cyan/30 rounded-full text-electric-cyan font-semibold text-sm">
+            <span className="px-6 py-2 bg-gradient-to-r from-frost-blue/20 to-ice-blue/20 border border-frost-blue/30 rounded-full text-frost-blue font-semibold text-sm">
               {t("badge")}
             </span>
           </motion.div>
@@ -41,7 +46,7 @@ export function AboutHero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-xl text-gray-300 max-w-3xl mx-auto mb-12"
+            className="text-xl text-slate-300 max-w-3xl mx-auto mb-12"
           >
             {t("description")}
           </motion.p>
@@ -52,21 +57,33 @@ export function AboutHero() {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="flex flex-wrap justify-center gap-6"
           >
-            <div className="bg-gradient-to-br from-slate-800/80 to-slate-900/80 rounded-xl p-6 border border-electric-cyan/30 min-w-[200px]">
+            <motion.div
+              whileHover={{ y: -8, scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              className="group frosted-glass rounded-xl p-6 border-2 border-frost-blue/30 hover:border-frost-blue min-w-[200px] transition-all duration-300"
+            >
               <div className="text-3xl mb-2">🤖</div>
-              <div className="text-2xl font-orbitron font-bold text-electric-cyan mb-1">20+</div>
-              <div className="text-gray-400">{t("stats.aiModels")}</div>
-            </div>
-            <div className="bg-gradient-to-br from-slate-800/80 to-slate-900/80 rounded-xl p-6 border border-neon-purple/30 min-w-[200px]">
+              <div className="text-2xl font-orbitron font-bold gradient-text mb-1 group-hover:scale-110 transition-transform">20+</div>
+              <div className="text-slate-400 group-hover:text-frost-blue transition-colors">{t("stats.aiModels")}</div>
+            </motion.div>
+            <motion.div
+              whileHover={{ y: -8, scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              className="group frosted-glass rounded-xl p-6 border-2 border-ice-blue/30 hover:border-ice-blue min-w-[200px] transition-all duration-300"
+            >
               <div className="text-3xl mb-2">⛓️</div>
-              <div className="text-2xl font-orbitron font-bold text-neon-purple mb-1">35+</div>
-              <div className="text-gray-400">{t("stats.blockchainNetworks")}</div>
-            </div>
-            <div className="bg-gradient-to-br from-slate-800/80 to-slate-900/80 rounded-xl p-6 border border-hot-pink/30 min-w-[200px]">
+              <div className="text-2xl font-orbitron font-bold gradient-text mb-1 group-hover:scale-110 transition-transform">35+</div>
+              <div className="text-slate-400 group-hover:text-ice-blue transition-colors">{t("stats.blockchainNetworks")}</div>
+            </motion.div>
+            <motion.div
+              whileHover={{ y: -8, scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              className="group frosted-glass rounded-xl p-6 border-2 border-crystal-blue/30 hover:border-crystal-blue min-w-[200px] transition-all duration-300"
+            >
               <div className="text-3xl mb-2">🚀</div>
-              <div className="text-2xl font-orbitron font-bold text-hot-pink mb-1">Dec 2025</div>
-              <div className="text-gray-400">{t("stats.launchDate")}</div>
-            </div>
+              <div className="text-2xl font-orbitron font-bold gradient-text mb-1 group-hover:scale-110 transition-transform">Dec 2025</div>
+              <div className="text-slate-400 group-hover:text-crystal-blue transition-colors">{t("stats.launchDate")}</div>
+            </motion.div>
           </motion.div>
         </motion.div>
       </div>

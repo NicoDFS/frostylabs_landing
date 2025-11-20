@@ -10,12 +10,13 @@ export function UseCases() {
   const useCases = [
     {
       badge: t("cards.socialMedia.badge"),
-      badgeClass: "bg-electric-cyan/20 text-electric-cyan",
-      borderClass: "border-electric-cyan/30 hover:border-electric-cyan hover:shadow-electric-cyan/20",
+      badgeClass: "bg-frost-blue/20 text-frost-blue border border-frost-blue/30",
+      borderClass: "border-frost-blue/30 hover:border-frost-blue",
+      glowClass: "from-frost-blue/20 to-ice-blue/20",
       icon: MessageSquare,
-      iconClass: "bg-electric-cyan/20 text-electric-cyan",
-      arrowClass: "text-electric-cyan",
-      benefitClass: "text-electric-cyan",
+      iconClass: "bg-gradient-to-br from-frost-blue/20 to-ice-blue/20 text-frost-blue border border-frost-blue/30",
+      arrowClass: "text-frost-blue",
+      benefitClass: "text-frost-blue",
       title: t("cards.socialMedia.title"),
       subtitle: t("cards.socialMedia.subtitle"),
       features: [
@@ -28,12 +29,13 @@ export function UseCases() {
     },
     {
       badge: t("cards.defiTrading.badge"),
-      badgeClass: "bg-neon-purple/20 text-neon-purple",
-      borderClass: "border-neon-purple/30 hover:border-neon-purple hover:shadow-neon-purple/20",
+      badgeClass: "bg-ice-blue/20 text-ice-blue border border-ice-blue/30",
+      borderClass: "border-ice-blue/30 hover:border-ice-blue",
+      glowClass: "from-ice-blue/20 to-crystal-blue/20",
       icon: TrendingUp,
-      iconClass: "bg-neon-purple/20 text-neon-purple",
-      arrowClass: "text-neon-purple",
-      benefitClass: "text-neon-purple",
+      iconClass: "bg-gradient-to-br from-ice-blue/20 to-crystal-blue/20 text-ice-blue border border-ice-blue/30",
+      arrowClass: "text-ice-blue",
+      benefitClass: "text-ice-blue",
       title: t("cards.defiTrading.title"),
       subtitle: t("cards.defiTrading.subtitle"),
       features: [
@@ -47,12 +49,13 @@ export function UseCases() {
     },
     {
       badge: t("cards.evmContract.badge"),
-      badgeClass: "bg-hot-pink/20 text-hot-pink",
-      borderClass: "border-hot-pink/30 hover:border-hot-pink hover:shadow-hot-pink/20",
+      badgeClass: "bg-crystal-blue/20 text-crystal-blue border border-crystal-blue/30",
+      borderClass: "border-crystal-blue/30 hover:border-crystal-blue",
+      glowClass: "from-crystal-blue/20 to-frost-blue/20",
       icon: FileText,
-      iconClass: "bg-hot-pink/20 text-hot-pink",
-      arrowClass: "text-hot-pink",
-      benefitClass: "text-hot-pink",
+      iconClass: "bg-gradient-to-br from-crystal-blue/20 to-frost-blue/20 text-crystal-blue border border-crystal-blue/30",
+      arrowClass: "text-crystal-blue",
+      benefitClass: "text-crystal-blue",
       title: t("cards.evmContract.title"),
       subtitle: t("cards.evmContract.subtitle"),
       features: [
@@ -66,12 +69,13 @@ export function UseCases() {
     },
     {
       badge: t("cards.customerSupport.badge"),
-      badgeClass: "bg-electric-cyan/20 text-electric-cyan",
-      borderClass: "border-electric-cyan/30 hover:border-electric-cyan hover:shadow-electric-cyan/20",
+      badgeClass: "bg-frost-blue/20 text-frost-blue border border-frost-blue/30",
+      borderClass: "border-frost-blue/30 hover:border-frost-blue",
+      glowClass: "from-frost-blue/20 to-ice-blue/20",
       icon: Headphones,
-      iconClass: "bg-electric-cyan/20 text-electric-cyan",
-      arrowClass: "text-electric-cyan",
-      benefitClass: "text-electric-cyan",
+      iconClass: "bg-gradient-to-br from-frost-blue/20 to-ice-blue/20 text-frost-blue border border-frost-blue/30",
+      arrowClass: "text-frost-blue",
+      benefitClass: "text-frost-blue",
       title: t("cards.customerSupport.title"),
       subtitle: t("cards.customerSupport.subtitle"),
       features: [
@@ -84,12 +88,13 @@ export function UseCases() {
     },
     {
       badge: t("cards.ecommerce.badge"),
-      badgeClass: "bg-neon-purple/20 text-neon-purple",
-      borderClass: "border-neon-purple/30 hover:border-neon-purple hover:shadow-neon-purple/20",
+      badgeClass: "bg-ice-blue/20 text-ice-blue border border-ice-blue/30",
+      borderClass: "border-ice-blue/30 hover:border-ice-blue",
+      glowClass: "from-ice-blue/20 to-crystal-blue/20",
       icon: ShoppingCart,
-      iconClass: "bg-neon-purple/20 text-neon-purple",
-      arrowClass: "text-neon-purple",
-      benefitClass: "text-neon-purple",
+      iconClass: "bg-gradient-to-br from-ice-blue/20 to-crystal-blue/20 text-ice-blue border border-ice-blue/30",
+      arrowClass: "text-ice-blue",
+      benefitClass: "text-ice-blue",
       title: t("cards.ecommerce.title"),
       subtitle: t("cards.ecommerce.subtitle"),
       features: [
@@ -102,12 +107,13 @@ export function UseCases() {
     },
     {
       badge: t("cards.contentCreation.badge"),
-      badgeClass: "bg-hot-pink/20 text-hot-pink",
-      borderClass: "border-hot-pink/30 hover:border-hot-pink hover:shadow-hot-pink/20",
+      badgeClass: "bg-crystal-blue/20 text-crystal-blue border border-crystal-blue/30",
+      borderClass: "border-crystal-blue/30 hover:border-crystal-blue",
+      glowClass: "from-crystal-blue/20 to-frost-blue/20",
       icon: Edit,
-      iconClass: "bg-hot-pink/20 text-hot-pink",
-      arrowClass: "text-hot-pink",
-      benefitClass: "text-hot-pink",
+      iconClass: "bg-gradient-to-br from-crystal-blue/20 to-frost-blue/20 text-crystal-blue border border-crystal-blue/30",
+      arrowClass: "text-crystal-blue",
+      benefitClass: "text-crystal-blue",
       title: t("cards.contentCreation.title"),
       subtitle: t("cards.contentCreation.subtitle"),
       features: [
@@ -121,8 +127,13 @@ export function UseCases() {
   ];
 
   return (
-    <section id="use-cases" className="py-20 bg-gradient-to-b from-slate-900/50 to-transparent">
-      <div className="container mx-auto px-6">
+    <section id="use-cases" className="relative py-24 overflow-hidden bg-gradient-to-b from-deep-arctic via-frozen-slate/20 to-deep-arctic">
+      {/* Ice crystal ambient effects */}
+      <div className="absolute inset-0 ice-crystal opacity-20"></div>
+      <div className="absolute top-40 left-10 w-96 h-96 bg-frost-blue/5 rounded-full blur-3xl float-animation"></div>
+      <div className="absolute bottom-40 right-10 w-80 h-80 bg-ice-blue/5 rounded-full blur-3xl float-animation" style={{ animationDelay: '-5s' }}></div>
+
+      <div className="container mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -132,7 +143,7 @@ export function UseCases() {
           <h2 className="text-4xl md:text-5xl font-orbitron font-bold mb-6">
             <span className="gradient-text">{t("title")}</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
             {t("subtitle")}
           </p>
         </motion.div>
@@ -145,49 +156,58 @@ export function UseCases() {
                 key={useCase.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                whileHover={{ y: -8, scale: 1.02 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`group relative bg-gradient-to-br from-slate-800/80 to-slate-900/80 rounded-2xl p-8 border ${useCase.borderClass} hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-2`}
+                transition={{ duration: 0.5, delay: index * 0.1, type: "spring", stiffness: 300 }}
+                className={`group relative frosted-glass rounded-2xl p-8 border-2 ${useCase.borderClass} hover:shadow-2xl transition-all duration-500 overflow-hidden`}
               >
-                {/* Badge */}
-                <div className={`absolute top-4 right-4 ${useCase.badgeClass} text-xs font-bold px-3 py-1 rounded-full`}>
-                  {useCase.badge}
-                </div>
+                {/* Shimmer effect */}
+                <div className="absolute inset-0 shimmer opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
 
-                {/* Header */}
-                <div className="flex items-start gap-4 mb-6">
-                  <div className={`w-14 h-14 ${useCase.iconClass} rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform`}>
-                    <Icon className="w-7 h-7" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-orbitron font-bold mb-2 text-white">
-                      {useCase.title}
-                    </h3>
-                    <p className="text-gray-400 text-sm">{useCase.subtitle}</p>
-                  </div>
-                </div>
+                {/* Glow effect */}
+                <div className={`absolute -inset-1 bg-gradient-to-br ${useCase.glowClass} rounded-2xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
 
-                {/* Features */}
-                <div className="space-y-3 mb-6">
-                  {useCase.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-center gap-3 text-gray-300">
-                      <span className={useCase.arrowClass}>→</span>
-                      <span>{feature}</span>
+                <div className="relative z-10">
+                  {/* Badge */}
+                  <div className={`absolute top-0 right-0 ${useCase.badgeClass} text-xs font-bold px-3 py-1 rounded-full shadow-sm`}>
+                    {useCase.badge}
+                  </div>
+
+                  {/* Header */}
+                  <div className="flex items-start gap-4 mb-6 mt-2">
+                    <div className={`w-16 h-16 ${useCase.iconClass} rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                      <Icon className="w-8 h-8" />
                     </div>
-                  ))}
-                </div>
-
-                {/* Benefit */}
-                <div className="flex flex-col gap-2">
-                  <div className={`flex items-center gap-2 text-sm ${useCase.benefitClass} font-semibold`}>
-                    <span>{useCase.benefit}</span>
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-orbitron font-bold mb-2 text-white group-hover:text-frost-blue transition-colors">
+                        {useCase.title}
+                      </h3>
+                      <p className="text-slate-400 text-sm">{useCase.subtitle}</p>
+                    </div>
                   </div>
-                  {useCase.subtext && (
-                    <div className="text-xs text-gray-500 italic">{useCase.subtext}</div>
-                  )}
+
+                  {/* Features */}
+                  <div className="space-y-3 mb-6">
+                    {useCase.features.map((feature, idx) => (
+                      <div key={idx} className="flex items-start gap-3 text-slate-300 group-hover:text-slate-200 transition-colors">
+                        <span className={`${useCase.arrowClass} font-bold text-lg flex-shrink-0`}>→</span>
+                        <span className="text-sm">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Benefit */}
+                  <div className="flex flex-col gap-2">
+                    <div className={`flex items-center gap-2 text-sm ${useCase.benefitClass} font-bold group-hover:scale-105 transition-transform duration-300`}>
+                      <span>{useCase.benefit}</span>
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                      </svg>
+                    </div>
+                    {useCase.subtext && (
+                      <div className="text-xs text-slate-500 italic">{useCase.subtext}</div>
+                    )}
+                  </div>
                 </div>
               </motion.div>
             );
@@ -201,12 +221,12 @@ export function UseCases() {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <p className="text-2xl text-gray-300 mb-6">
+          <p className="text-2xl text-slate-300 mb-6">
             {t("cta")}
           </p>
           <a
             href="#pricing"
-            className="inline-block bg-gradient-to-r from-electric-cyan to-neon-purple hover:from-electric-cyan/80 hover:to-neon-purple/80 text-white font-bold px-8 py-4 rounded-lg text-lg transition-all transform hover:scale-105 shadow-lg hover:shadow-electric-cyan/50"
+            className="inline-block bg-gradient-to-r from-frost-blue to-crystal-blue hover:from-ice-blue hover:to-frost-blue text-white font-bold px-10 py-4 rounded-xl text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-frost-blue/50 pulse-glow"
           >
             {t("ctaButton")}
           </a>

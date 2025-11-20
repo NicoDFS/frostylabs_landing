@@ -13,8 +13,8 @@ const orbitron = Orbitron({
 });
 
 export const metadata: Metadata = {
-  title: "FrostyLabs - AI Agents + Blockchain Automation",
-  description: "Build powerful AI agents with blockchain integration. No-code workflow automation for Web3.",
+  title: "FrostyLabs - Automate Crypto Research in Minutes | AI Blockchain Workflows",
+  description: "Build AI workflows that analyze tokens, track wallets, and automate DeFi trading across 35+ networks. No-code automation for crypto traders. Free beta launching December 2025.",
 };
 
 export default async function RootLayout({

@@ -45,7 +45,7 @@ export function Hero() {
 
   return (
     <section className="relative pt-32 pb-24 overflow-hidden hero-gradient-bg">
-      <div className="absolute inset-0 bg-gradient-radial from-transparent via-slate-900/20 to-slate-900/40"></div>
+      <div className="absolute insert-0 bg-gradient-radial from-transparent via-frozen-slate/20 to-frozen-slate/40"></div>
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center max-w-5xl mx-auto">
           <motion.h1
@@ -70,7 +70,7 @@ export function Hero() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="inline-block bg-electric-cyan/20 text-electric-cyan px-8 py-3 rounded-full font-semibold mb-10 text-lg"
+            className="inline-block bg-frost-blue/20 text-frost-blue px-8 py-3 rounded-full font-semibold mb-10 text-lg border border-frost-blue/30"
           >
             {t("launchBadge")}
           </motion.div>
@@ -98,12 +98,12 @@ export function Hero() {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder={t("emailPlaceholder")}
                 required
-                className="flex-1 px-8 py-6 rounded-xl bg-slate-800/50 border-2 border-slate-700 focus:border-electric-cyan text-white placeholder-gray-400 text-lg"
+                className="flex-1 px-8 py-6 rounded-xl bg-frozen-slate/50 border-2 border-slate-700 focus:border-frost-blue text-white placeholder-gray-400 text-lg"
               />
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="bg-gradient-to-r from-electric-cyan to-neon-purple hover:from-cyan-500 hover:to-purple-600 px-10 py-6 rounded-xl font-semibold text-lg transition-all transform hover:scale-105 pulse-glow"
+                className="bg-gradient-to-r from-frost-blue to-crystal-blue hover:from-ice-blue hover:to-frost-blue px-10 py-6 rounded-xl font-semibold text-lg transition-all transform hover:scale-105 pulse-glow"
               >
                 {t("joinBeta")}
               </Button>

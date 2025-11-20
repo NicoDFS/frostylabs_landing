@@ -7,8 +7,13 @@ export function FeaturesHero() {
   const t = useTranslations("featuresPage.hero");
 
   return (
-    <section className="pt-32 pb-20 px-6">
-      <div className="container mx-auto max-w-6xl">
+    <section className="relative pt-32 pb-20 px-6 overflow-hidden">
+      {/* Ice crystal ambient effects */}
+      <div className="absolute inset-0 ice-crystal opacity-20"></div>
+      <div className="absolute top-20 right-20 w-96 h-96 bg-frost-blue/5 rounded-full blur-3xl float-animation"></div>
+      <div className="absolute bottom-20 left-20 w-80 h-80 bg-ice-blue/5 rounded-full blur-3xl float-animation" style={{ animationDelay: '-3s' }}></div>
+
+      <div className="container mx-auto max-w-6xl relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -21,7 +26,7 @@ export function FeaturesHero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="inline-block mb-6"
           >
-            <span className="px-6 py-2 bg-gradient-to-r from-electric-cyan/20 to-neon-purple/20 border border-electric-cyan/30 rounded-full text-electric-cyan font-semibold text-sm">
+            <span className="px-6 py-2 bg-gradient-to-r from-frost-blue/20 to-ice-blue/20 border border-frost-blue/30 rounded-full text-frost-blue font-semibold text-sm">
               {t("badge")}
             </span>
           </motion.div>
@@ -41,7 +46,7 @@ export function FeaturesHero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-xl text-gray-300 max-w-3xl mx-auto mb-12"
+            className="text-xl text-slate-300 max-w-3xl mx-auto mb-12"
           >
             {t("description")}
           </motion.p>
@@ -52,22 +57,38 @@ export function FeaturesHero() {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
           >
-            <div className="text-center">
-              <div className="text-4xl font-orbitron font-bold text-electric-cyan mb-2">20+</div>
-              <div className="text-gray-400">{t("stats.aiModels")}</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-orbitron font-bold text-neon-purple mb-2">35+</div>
-              <div className="text-gray-400">{t("stats.blockchainNetworks")}</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-orbitron font-bold text-hot-pink mb-2">15+</div>
-              <div className="text-gray-400">{t("stats.blockchainOperations")}</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-orbitron font-bold text-golden-yellow mb-2">∞</div>
-              <div className="text-gray-400">{t("stats.possibilities")}</div>
-            </div>
+            <motion.div
+              className="text-center group"
+              whileHover={{ y: -5 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <div className="text-4xl font-orbitron font-bold gradient-text mb-2 group-hover:scale-110 transition-transform">20+</div>
+              <div className="text-slate-400 group-hover:text-frost-blue transition-colors">{t("stats.aiModels")}</div>
+            </motion.div>
+            <motion.div
+              className="text-center group"
+              whileHover={{ y: -5 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <div className="text-4xl font-orbitron font-bold gradient-text mb-2 group-hover:scale-110 transition-transform">35+</div>
+              <div className="text-slate-400 group-hover:text-ice-blue transition-colors">{t("stats.blockchainNetworks")}</div>
+            </motion.div>
+            <motion.div
+              className="text-center group"
+              whileHover={{ y: -5 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <div className="text-4xl font-orbitron font-bold gradient-text mb-2 group-hover:scale-110 transition-transform">15+</div>
+              <div className="text-slate-400 group-hover:text-crystal-blue transition-colors">{t("stats.blockchainOperations")}</div>
+            </motion.div>
+            <motion.div
+              className="text-center group"
+              whileHover={{ y: -5 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <div className="text-4xl font-orbitron font-bold gradient-text mb-2 group-hover:scale-110 transition-transform">∞</div>
+              <div className="text-slate-400 group-hover:text-frost-blue transition-colors">{t("stats.possibilities")}</div>
+            </motion.div>
           </motion.div>
         </motion.div>
       </div>

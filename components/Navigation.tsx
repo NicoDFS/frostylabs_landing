@@ -3,7 +3,7 @@
 import { useTranslations, useLocale } from "next-intl";
 import { useState } from "react";
 import Image from "next/image";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -39,7 +39,7 @@ export function Navigation() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 glassmorphism">
+    <nav className="fixed top-0 left-0 right-0 z-50 glassmorphism border-b border-frost-blue/10">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -51,7 +51,7 @@ export function Navigation() {
               height={40}
               className="rounded-lg"
             />
-            <span className="text-xl font-orbitron font-bold">FrostyLabs.ai</span>
+            <span className="text-xl font-orbitron font-bold gradient-text">FrostyLabs.ai</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -62,7 +62,7 @@ export function Navigation() {
                 href={link.href}
                 target={link.external ? "_blank" : undefined}
                 rel={link.external ? "noopener noreferrer" : undefined}
-                className="text-gray-300 hover:text-electric-cyan transition-colors"
+                className="text-slate-300 hover:text-frost-blue transition-all duration-300 hover:scale-105"
               >
                 {link.label}
               </a>
@@ -73,17 +73,17 @@ export function Navigation() {
               <DropdownMenuTrigger asChild>
                 <Button
                   variant="outline"
-                  className="bg-slate-800/50 text-gray-300 border border-electric-cyan/20 rounded-lg px-3 py-2 text-sm hover:border-electric-cyan/50 transition-colors"
+                  className="bg-slate-800/50 text-slate-300 border border-frost-blue/20 rounded-lg px-3 py-2 text-sm hover:border-frost-blue/50 hover:bg-slate-800/70 transition-all duration-300"
                 >
                   {currentLocale?.name || "🇺🇸 English"}
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-slate-800 border-electric-cyan/20">
+              <DropdownMenuContent className="bg-slate-800 border-frost-blue/20">
                 {SUPPORTED_LOCALES.map((loc) => (
                   <DropdownMenuItem
                     key={loc.code}
                     onClick={() => handleLocaleChange(loc.code)}
-                    className="text-gray-300 hover:text-electric-cyan hover:bg-slate-700 cursor-pointer"
+                    className="text-slate-300 hover:text-frost-blue hover:bg-slate-700 cursor-pointer transition-colors"
                   >
                     {loc.name}
                   </DropdownMenuItem>
@@ -94,8 +94,9 @@ export function Navigation() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white"
+            className="md:hidden text-white hover:text-frost-blue transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle mobile menu"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -111,7 +112,7 @@ export function Navigation() {
                   href={link.href}
                   target={link.external ? "_blank" : undefined}
                   rel={link.external ? "noopener noreferrer" : undefined}
-                  className="text-gray-300 hover:text-electric-cyan transition-colors"
+                  className="text-slate-300 hover:text-frost-blue transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.label}
@@ -123,12 +124,12 @@ export function Navigation() {
                 <DropdownMenuTrigger asChild>
                   <Button
                     variant="outline"
-                    className="bg-slate-800/50 text-gray-300 border border-electric-cyan/20 rounded-lg px-3 py-2 text-sm hover:border-electric-cyan/50 transition-colors w-full"
+                    className="bg-slate-800/50 text-slate-300 border border-frost-blue/20 rounded-lg px-3 py-2 text-sm hover:border-frost-blue/50 transition-colors w-full"
                   >
                     {currentLocale?.name || "🇺🇸 English"}
                   </Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent className="bg-slate-800 border-electric-cyan/20 w-full">
+                <DropdownMenuContent className="bg-slate-800 border-frost-blue/20 w-full">
                   {SUPPORTED_LOCALES.map((loc) => (
                     <DropdownMenuItem
                       key={loc.code}
@@ -136,7 +137,7 @@ export function Navigation() {
                         handleLocaleChange(loc.code);
                         setMobileMenuOpen(false);
                       }}
-                      className="text-gray-300 hover:text-electric-cyan hover:bg-slate-700 cursor-pointer"
+                      className="text-slate-300 hover:text-frost-blue hover:bg-slate-700 cursor-pointer"
                     >
                       {loc.name}
                     </DropdownMenuItem>

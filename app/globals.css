@@ -42,13 +42,15 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
 
-  /* FrostyLabs custom colors */
-  --color-electric-cyan: #06b6d4;
-  --color-neon-purple: #8b5cf6;
-  --color-hot-pink: #ec4899;
-  --color-golden-yellow: #fbbf24;
-  --color-deep-navy: #0f172a;
-  --color-soft-pink: #f9a8d4;
+  /* FrostyLabs Ice/Snow Theme */
+  --color-frost-blue: #7dd3fc;
+  --color-ice-blue: #38bdf8;
+  --color-crystal-blue: #0ea5e9;
+  --color-glacier: #e0f2fe;
+  --color-silver: #cbd5e1;
+  --color-arctic-white: #f8fafc;
+  --color-deep-arctic: #0c1e2e;
+  --color-frozen-slate: #1e293b;
 }
 
 :root {
@@ -128,22 +130,30 @@
     @apply bg-background text-foreground;
   }
 
-  /* FrostyLabs custom colors */
+  /* FrostyLabs Ice/Snow Theme */
   :root {
-    --electric-cyan: #06b6d4;
-    --neon-purple: #8b5cf6;
-    --hot-pink: #ec4899;
-    --golden-yellow: #fbbf24;
+    --frost-blue: #7dd3fc;
+    --ice-blue: #38bdf8;
+    --crystal-blue: #0ea5e9;
+    --glacier: #e0f2fe;
+    --silver: #cbd5e1;
+    --arctic-white: #f8fafc;
+    --deep-arctic: #0c1e2e;
+    --frozen-slate: #1e293b;
   }
 }
 
 @layer utilities {
   .gradient-text {
-    @apply bg-gradient-to-r from-[var(--electric-cyan)] via-[var(--neon-purple)] to-[var(--hot-pink)] bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-[var(--frost-blue)] via-[var(--ice-blue)] to-[var(--crystal-blue)] bg-clip-text text-transparent;
   }
 
   .glassmorphism {
     @apply bg-slate-900/80 backdrop-blur-md;
+  }
+
+  .frosted-glass {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10;
   }
 }
 
@@ -159,22 +169,68 @@
 
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(6, 182, 212, 0.5);
+    box-shadow: 0 0 20px rgba(125, 211, 252, 0.4), 0 0 40px rgba(56, 189, 248, 0.2);
   }
   50% {
-    box-shadow: 0 0 40px rgba(6, 182, 212, 0.8);
+    box-shadow: 0 0 30px rgba(125, 211, 252, 0.6), 0 0 60px rgba(56, 189, 248, 0.3);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
   }
 }
 
 .hero-gradient-bg {
   background: linear-gradient(135deg,
-    rgba(6, 182, 212, 0.1) 0%,
-    rgba(139, 92, 246, 0.1) 50%,
-    rgba(236, 72, 153, 0.1) 100%);
-  background-size: 200% 200%;
-  animation: gradient-shift 15s ease infinite;
+    rgba(125, 211, 252, 0.08) 0%,
+    rgba(56, 189, 248, 0.12) 25%,
+    rgba(14, 165, 233, 0.15) 50%,
+    rgba(56, 189, 248, 0.12) 75%,
+    rgba(125, 211, 252, 0.08) 100%);
+  background-size: 400% 400%;
+  animation: gradient-shift 20s ease infinite;
 }
 
 .pulse-glow {
-  animation: pulse-glow 2s ease-in-out infinite;
+  animation: pulse-glow 3s ease-in-out infinite;
 }
+
+.shimmer {
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Ice crystal effect */
+.ice-crystal::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%,
+    rgba(125, 211, 252, 0.15) 0%,
+    transparent 70%);
+  filter: blur(40px);
+  pointer-events: none;
+}
+

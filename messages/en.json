@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "title": "FrostyLabs.ai - AI-Powered Workflow Automation | Launching December 2025",
-    "description": "Automate everything with AI-powered workflows",
-    "keywords": "AI automation, workflow automation, AI agents, blockchain"
+    "title": "FrostyLabs - Automate Crypto Research in Minutes, Not Hours | AI Blockchain Workflows",
+    "description": "Build AI workflows that analyze tokens, track wallets, and automate DeFi trading across 35+ networks. No-code automation for crypto traders and developers. Free beta launching December 2025.",
+    "keywords": "AI crypto automation, blockchain workflow automation, no-code DeFi tools, token analysis automation, AI trading bot builder"
   },
   "nav": {
     "home": "Home",
@@ -14,15 +14,15 @@
     "twitter": "Twitter"
   },
   "hero": {
-    "title": "Automate Everything",
-    "subtitle": "with AI-Powered Workflows",
-    "launchBadge": "🚀 Launching December 2025",
-    "description": "Next-generation AI automation. Connect 20+ AI models and MCP tools to automate complex workflows with native support for 35+ blockchain networks - all in one platform.",
-    "emailPlaceholder": "Enter your email for early access",
-    "joinBeta": "Join Beta Waitlist",
+    "title": "Automate Crypto Research",
+    "subtitle": "in Minutes, Not Hours",
+    "launchBadge": "🎁 Free Beta • 50 Spots Left",
+    "description": "Build AI workflows that analyze tokens, track wallets, and execute trades automatically. No coding required. Works across 35+ blockchains.",
+    "emailPlaceholder": "Enter your email for instant early access",
+    "joinBeta": "Get Early Access  →",
     "frostyFlowButton": "FrostyFlow Coming Soon",
     "viewGithub": "View on GitHub",
-    "successMessage": "✅ Thanks! You're on the waitlist. Check your email for confirmation.",
+    "successMessage": "✅ You're in! Check your email for instant access. Welcome to FrostyLabs.",
     "errorMessage": "❌ Something went wrong. Please try again."
   },
   "stats": {
@@ -118,11 +118,11 @@
     }
   },
   "pricing": {
-    "title": "NFT-Based Subscriptions",
-    "subtitle": "Own your access rights with NFT subscriptions. Trade, transfer, or hold your AI automation privileges.",
+    "title": "Beta Pricing",
+    "subtitle": "Get lifetime 50% discount by joining our beta—lock in your pricing before we launch.",
     "free": {
       "name": "Free",
-      "price": "$0",
+      "price": "Free Forever",
       "description": "Perfect for getting started",
       "emoji": "🆓",
       "cta": "Get Started",
@@ -135,11 +135,11 @@
     },
     "pro": {
       "name": "Pro",
-      "price": "$25",
+      "price": "$25/mo",
       "description": "For professionals building advanced workflows",
       "emoji": "⚡",
-      "badge": "POPULAR",
-      "cta": "Mint NFT Access",
+      "badge": "50% OFF BETA",
+      "cta": "Join Beta ($12.50/mo)",
       "features": [
         "10 Projects",
         "50 Workflows",
@@ -152,10 +152,10 @@
     },
     "enterprise": {
       "name": "Enterprise",
-      "price": "$99",
+      "price": "$99/mo",
       "description": "For teams and advanced automation",
       "emoji": "🏢",
-      "cta": "Contact Sales",
+      "cta": "Join Beta ($49.50/mo)",
       "features": [
         "Unlimited Projects",
         "Unlimited Workflows",
