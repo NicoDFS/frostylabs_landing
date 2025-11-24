@@ -4,43 +4,10 @@ import { useTranslations, useLocale } from "next-intl";
 import { useState } from "react";
 import { toast } from "sonner";
 import { motion } from "framer-motion";
-import { createThirdwebClient } from "thirdweb";
-import { defineChain } from "thirdweb/chains";
 import { ConnectButton, useActiveAccount } from "thirdweb/react";
-import { createWallet, inAppWallet } from "thirdweb/wallets";
 import { Loader2, Twitter, CheckCircle2, Wallet } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
-// Initialize ThirdWeb Client
-const client = createThirdwebClient({
-  clientId: process.env.NEXT_PUBLIC_THIRDWEB_CLIENT_ID || "87654321876543218765432187654321", // Replace with your actual Client ID from ThirdWeb Dashboard
-});
-
-// Define Chain (Base)
-const chain = defineChain(8453);
-
-// Define Wallets
-const wallets = [
-  inAppWallet({
-    auth: {
-      options: [
-        "google",
-        "discord",
-        "telegram",
-        "email",
-        "x",
-        "passkey",
-        "coinbase",
-        "github",
-      ],
-    },
-  }),
-  createWallet("io.metamask"),
-  createWallet("com.coinbase.wallet"),
-  createWallet("me.rainbow"),
-  createWallet("io.rabby"),
-  createWallet("io.zerion.wallet"),
-];
+import { client, chain, wallets } from "@/lib/thirdweb";
 
 export function Hero() {
   const t = useTranslations("hero");

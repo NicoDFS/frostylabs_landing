@@ -60,7 +60,7 @@ export function VideoDemo() {
                         <div className="relative aspect-video">
                             <video
                                 className="w-full h-full object-cover bg-deep-arctic"
-                                src="/recordings/short.mp4"
+                                src="/recordings/tokenWorkflow.mp4"
                                 controls
                                 muted
                                 playsInline
